@@ -1,9 +1,10 @@
+  
 const express = require('express');
 const router = express.Router();
 
 router.get('/', (req,res,next) => {
     res.status(200).json({
-        message:'Handling GET requests to /Akshat' 
+        message:'Handling GET requests to /name' 
     });
 });
 
@@ -13,13 +14,13 @@ router.post('/', (req,res,next) => {
     });
 });
 
-router.get('/:Akshat', (req,res,next) => {
+router.get('/name', (req,res,next) => {
     res.status(200).json({
         message:'Hello Akshat' ,
     });
 });
 
-router.post('/:Akshat', (req,res,next) => {
+router.post('/name', (req,res,next) => {
     res.status(200).json({
         message:'Hello Akshat' ,
     });
@@ -45,11 +46,6 @@ router.post('/:age', (req,res,next) => {
             message: 'You are an adult',
         });
     }
-}
+});
 module.exports = router;
-
-
-
-
-
 
