@@ -29,6 +29,7 @@ router.post('/name', (req,res,next) => {
 
 
 router.post('/:age', (req,res,next) => {
+    const age = req.params.age;
     if (age <= '12'){
         res.status(200).json({
             message: 'You are a child' ,
