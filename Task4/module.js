@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
-const nameRoutes = require('./api/routes/name');
-const ageRoutes = require('./api/routes/age');
+const name = require('./api/routes/name');
+const age = require('./api/routes/age');
 
-app.use('/name',nameRoutes);
-app.use('/age',ageRoutes);
+app.use('/name',name);
+app.use('/age',age);
 
 module.exports = app;
