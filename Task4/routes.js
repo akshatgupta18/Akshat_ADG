@@ -2,17 +2,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req,res,next) => {
-    res.status(200).json({
-        message:'Handling GET requests to /name' 
-    });
-});
-
-router.post('/', (req,res,next) => {
-    res.status(201).json({
-        message:'Handling POST requests to /age' 
-    });
-});
 
 router.get('/name', (req,res,next) => {
     res.status(200).json({
@@ -25,8 +14,6 @@ router.post('/name', (req,res,next) => {
         message:'Hello Akshat' ,
     });
 });
-
-
 
 router.post('/:age', (req,res,next) => {
     const age = req.params.age;
